@@ -27,7 +27,7 @@ app.post('/api/send-message', async (req, res) => {
             });
         }
         
-        if (message.length > 5000) {
+        if (message.length > 500) {
             return res.status(400).json({ 
                 success: false, 
                 error: 'Message too long' 
